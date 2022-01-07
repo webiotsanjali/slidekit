@@ -7,23 +7,22 @@ const browserSync = require('browser-sync').create();
    
 //scss to css
 function style() {
-  return gulp.src('assets/scss/*.scss', { sourcemaps: true })
-    .pipe(sourcemaps.init())
+  return gulp.src('assets/scss/*.scss'
+  // { sourcemaps: true }
+  )
+    // .pipe(sourcemaps.init())
     .pipe(sass({
       //   outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css', { sourcemaps: '.' }))
-  // .pipe(bs.reload({
-  //     stream: true
-  // }));
+    // .pipe(sourcemaps.write())
+    // .pipe(gulp.dest('assets/css', { sourcemaps: '.' }))
 }
 
 // Watch function
 function watch() {
   browserSync.init({
-    proxy: 'localhost/project-html/laia/index.html'
+    proxy: 'localhost/project-html/slidekit/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('*.html').on('change', browserSync.reload);
