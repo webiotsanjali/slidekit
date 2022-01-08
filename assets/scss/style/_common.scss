@@ -1,0 +1,120 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: calc(36px + (60 - 36) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(48px + (72 - 48) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    font-size: calc(30px + (42 - 30) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(41px + (51 - 41) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(28px + (34 - 28) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    margin: 0;
+}
+
+h4 {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: bold;
+    margin: 0;
+}
+
+h5 {
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    margin: 0;
+}
+
+h6 {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.27;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+/* input css */
+.form-control {
+    padding: 12px;
+    border-radius: 10px;
+    color: $bg-dark-50;
+    &::placeholder {
+        color: $text-light;
+    }
+}
+.input-group {
+    .form-control {
+        border-right: none;
+    }
+    &-text {
+        background: $white;
+        border-radius: 10px;
+    }
+}
+
+/* ratio css */
+.ratio_landscape  {
+    .bg-size {
+        &:before {
+            padding-top: 60%;
+            content: "";
+            display: block;
+        }
+    }
+}
+
+/* section css */
+section {
+    padding-top: calc(50px + (90 - 50) * ((100vw - 320px) / (1920 - 320)));
+    .border-bottom {
+        border-bottom: 1px solid $border-color !important;
+    }
+}
+.section-b-space {
+    padding-bottom: calc(30px + (78 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.bg-dark {
+    background: $bg-dark !important;
+}
+.bg-dark1 {
+    background: $bg-dark-50;
+}
+.bg-dark, .bg-dark1 {
+    color: $white;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1460px) {
+    .container {
+        max-width: 1430px;
+    }
+}

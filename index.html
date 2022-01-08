@@ -12,46 +12,256 @@
     <title>Slidekit</title>
 
    <!--Google font-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+   <!-- swiper css -->
+   <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+   
    <!-- Bootstrap css -->
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/color1.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-
     <main>
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-              <span class="fs-4">Simple header</span>
-            </a>
-      
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-          </header>
-    </main>
-    <div class="container">
-        <!-- <div class="row">
-            <div class="col-12">
-                <h1>Slidekit</h1>
-                <div class="form-floating">  
-                    <label for="" class="name">name</label>
-                    <input type="text" class="form-control"> 
+        <!--header start -->
+        <header id="header">
+            <div class="d-flex flex-wrap py-3">
+                <a href="#">
+                    <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                </a>
+                <form class="header-search m-auto">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search a template">
+                    </div>
+                </form>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Get access now</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- search panel start -->
+            <div class="search-panel text-center">
+                <div class="container">
+                    <h2>Impactful Presentations. Made Faster.</h2>
+                    <p>SlideKit combines with Google Slides to help bring your stories to life.</p>
+                    <form class="row justify-content-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="search a template" aria-label="search a template" aria-describedby="basic-addon">
+                                <span class="input-group-text" id="basic-addon">@example.com</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div> -->
+            <!-- search panel end -->
+
+            <!-- navigation menu start -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Infographics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Deck</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Creative</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <!-- navigation menu end -->
+
+        </header>
+        <!--header end -->
+        
+        <!-- trending section start -->
+        <section class="bg-dark1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <h3>Trending Templates</h3>
+                        </div>
+                        <div class="section-b-space border-bottom">
+                            <div class="swiper_wrap arrow-slider">
+                                <div class="slider-wrapper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper arrowswiper ratio_landscape">
+                                        <div class="swiper-wrapper">
+                                          <div class="swiper-slide">
+                                              <div class="template-box">
+                                                  <div class="template-image">
+                                                      <img src="assets/images/trending/1.jpg" class="bg-img" alt="template image">
+                                                      <div class="overlay">
+                                                          <div class="flex-grow-1">
+                                                            <h6>Skot</h6>
+                                                            <span>Infographics</span>
+                                                          </div>
+                                                          <a href="#">
+                                                              Use this template
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                                  <div class="template-content">
+                                                    <h5>7 Step Process Sales Funnel Template</h5>
+                                                    <span>Downloads 3562</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <div class="template-box">
+                                                <div class="template-image">
+                                                    <img src="assets/images/trending/2.jpg" class="bg-img" alt="template image">
+                                                    <div class="overlay">
+                                                        <div class="flex-grow-1">
+                                                          <h6>Skot</h6>
+                                                          <span>Infographics</span>
+                                                        </div>
+                                                        <a href="#">
+                                                            Use this template
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="template-content">
+                                                  <h5>Mobile Template</h5>
+                                                  <span>Downloads 5823</span>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <div class="template-box">
+                                                <div class="template-image">
+                                                    <img src="assets/images/trending/3.jpg" class="bg-img" alt="template image">
+                                                    <div class="overlay">
+                                                        <div class="flex-grow-1">
+                                                          <h6>Skot</h6>
+                                                          <span>Infographics</span>
+                                                        </div>
+                                                        <a href="#">
+                                                            Use this template
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="template-content">
+                                                  <h5>Pixels Template</h5>
+                                                  <span>Downloads 4514</span>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <div class="template-box">
+                                                <div class="template-image">
+                                                    <img src="assets/images/trending/2.jpg" class="bg-img" alt="template image">
+                                                    <div class="overlay">
+                                                        <div class="flex-grow-1">
+                                                          <h6>Skot</h6>
+                                                          <span>Infographics</span>
+                                                        </div>
+                                                        <a href="#">
+                                                            Use this template
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="template-content">
+                                                  <h5>Mobile Template</h5>
+                                                  <span>Downloads 5823</span>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- trending section end -->
+
+        <!-- theme section start -->
+        <section class="bg-dark1 section-b-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <h3>Themes</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- theme section end -->
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
     </div>
-    
+
+    <!-- Bootstrap js -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
     <script src="assets/js/script.js"></script>
+
+    <script>
+        var swiper = new Swiper(".arrowswiper", {
+            slidesPerView: 3,
+            freeMode: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 
