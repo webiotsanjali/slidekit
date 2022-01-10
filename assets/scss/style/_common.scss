@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    font-size: calc(36px + (60 - 36) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(36px + (62 - 36) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(48px + (72 - 48) * ((100vw - 320px) / (1920 - 320)));
     font-weight: bold;
     margin: 0;
@@ -56,6 +56,44 @@ a {
     line-height: 1.27;
     color: $primary-color;
     text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        transition: 0.5s;
+    }
+}
+
+.gy-6 {
+    margin: -18px;
+    > div {
+        padding: 18px;
+    }
+}
+
+.btn {
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 500;
+    padding: 15px 40px;
+    &:hover, &:focus, &:active {
+        box-shadow: none;
+    }
+    &:active {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+.btn-lg {
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(23px + (29 - 23) * ((100vw - 320px) / (1920 - 320)));
+}
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:hover, &:focus {
+        background-color: darken($primary-color, 2%);
+        border-color: darken($primary-color, 2%);
+    }
 }
 
 /* input css */
@@ -98,6 +136,9 @@ section {
 .section-b-space {
     padding-bottom: calc(30px + (78 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
+.section-lg-space {
+    padding: calc(70px + (140 - 70) * ((100vw - 320px) / (1920 - 320))) 0;
+}
 
 .bg-dark {
     background: $bg-dark !important;
@@ -111,6 +152,47 @@ section {
 
 .title {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        font-weight: 500;
+        color: $white;
+        text-align: right;
+        img {
+            transition: 0.5s;
+            margin-left: 5px;
+            margin-top: -1px;
+        }
+        &:hover {
+            font-size:  calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+            line-height:  calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+            color: $primary-color;
+            img {
+                width: 18px;
+                height: 18px;
+                margin-left: 8px;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+.title-2 {
+    h2 {
+        font-weight: 600;
+        padding-bottom: 13px;
+    }
+    span {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -13px;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid $primary-color;
+        }
+    }
 }
 
 @media (min-width: 1460px) {
