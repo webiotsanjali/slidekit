@@ -8,3 +8,44 @@ $border-color: #313337;
 $bg-overlay: #34363a;
 $text-light: #A5A5A5;
 $slider-bullet-bg: #333741;
+$footer-bg: #1A1A1A;
+$breadcrumb-active-color: #BBBABA;
+
+// breakpoints 
+@mixin respond ($breakpoint) {
+    @if $breakpoint==1540 {
+        @media only screen and (max-width: 1540px) {
+            @content;
+        }
+    }
+    @if $breakpoint==laptop {
+        @media only screen and (max-width: 1399px) {
+            @content;
+        }
+    }
+    @if $breakpoint==laptop2 {
+        @media only screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if $breakpoint==tablet {
+        @media only screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $breakpoint==ipad {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $breakpoint==mobile {
+        @media only screen and (max-width: 575px) {
+            @content;
+        }
+    }
+    @if $breakpoint==mobilesm {
+        @media only screen and (max-width: 420px) {
+            @content;
+        }
+    }
+}

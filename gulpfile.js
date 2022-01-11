@@ -11,9 +11,7 @@ function style() {
   { sourcemaps: true }
   )
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      //   outputStyle: 'compressed'
-    }).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css', { sourcemaps: '.' }))

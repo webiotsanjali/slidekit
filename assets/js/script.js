@@ -31,4 +31,8 @@
         el.hide();
     });
 
+    $(".nav-pills .search-icon").on('click', function() {
+        $(".form-icon").toggleClass('open');
+     });
+
 })(jQuery);

@@ -2,18 +2,35 @@
 /* header css start */
 header {
     color: $white;
+    transition: 0.5s;
     > div, nav {
         background: $bg-dark;
+        transition: 0.5s;
     }
    
     .d-flex {
         align-items: center;
         padding: 0 70px;
+        @include respond(tablet) {
+            padding: 0 30px;
+        }
+        @include respond(mobile) {
+            padding: 0 12px;
+        }
     }
     .header-search {
         opacity: 0;
         transition: 0.5s;
         width: 52%;
+        @include respond(laptop2) {
+            width: 40%;
+        }
+        @include respond(ipad) {
+            opacity: 1;
+        }
+        .form-icon {
+            position: relative;
+        }
         .form-control {
             background: #242424;
             border-radius: 8px;
@@ -24,6 +41,10 @@ header {
             }
         }
     }
+    .search-icon {
+        width: 23px;
+        height: 23px;
+    }
     .nav {
         .nav-link {
             color: $primary-color;
@@ -31,6 +52,9 @@ header {
             line-height: 1.27;
             transition: 0.5s;
             padding: 0 15px;
+            @include respond(tablet) {
+                padding: 0 10px;
+            }
             &:hover {
                 font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
                 font-weight: bold;
@@ -48,6 +72,9 @@ header {
     .navbar {
         padding: 0;
         .navbar-nav {
+            flex-direction: unset;
+            justify-content: center;
+            flex-wrap: wrap;
             .nav-link {
                 position: relative;
                 color: $white;
@@ -55,6 +82,9 @@ header {
                 // min-width: 135px;
                 text-align: center;
                 transition: 0.5s;
+                @include respond(ipad) {
+                    padding: 12px;
+                } 
                 &::after {
                     position: absolute;
                     content: '';
@@ -87,14 +117,19 @@ header {
         }
     }
 
-    &.sticky {
+    &.fixed {
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 3;
+        transition: 0.5s;
         .navbar {
             .navbar-nav {
                 .nav-link {
                     padding: 16px 15px;
+                    @include respond(ipad) {
+                        padding: 12px;
+                    } 
                 }
             }
         }
@@ -102,14 +137,13 @@ header {
             opacity: 1;
             transition: 0.5s;
         }
-        .search-panel {
-            display: none;
-        }
         > div {
             background: #131313;
+            transition: 0.5s;
         }
         nav {
             background: #1A1A1A;
+            transition: 0.5s;
         }
     }
 }

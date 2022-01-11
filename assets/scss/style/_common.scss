@@ -13,8 +13,8 @@ h1 {
 }
 
 h2 {
-    font-size: calc(30px + (42 - 30) * ((100vw - 320px) / (1920 - 320)));
-    line-height: calc(41px + (51 - 41) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(23px + (42 - 23) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(30px + (51 - 30) * ((100vw - 320px) / (1920 - 320)));
     font-weight: bold;
     margin: 0;
 }
@@ -60,6 +60,14 @@ a {
     &:hover {
         transition: 0.5s;
     }
+}
+
+ol, ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: inline-block;
 }
 
 .gy-6 {
@@ -115,6 +123,20 @@ a {
     }
 }
 
+.form-icon {
+    .form-control {
+        padding-right: 40px;
+    }
+    .search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 23px;
+        height: 23px;
+    }
+}
+
 /* ratio css */
 .ratio_landscape  {
     .bg-size {
@@ -137,7 +159,7 @@ section {
     padding-bottom: calc(30px + (78 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
 .section-lg-space {
-    padding: calc(70px + (140 - 70) * ((100vw - 320px) / (1920 - 320))) 0;
+    padding: calc(60px + (140 - 60) * ((100vw - 320px) / (1920 - 320))) 0;
 }
 
 .bg-dark {
