@@ -94,6 +94,7 @@
     &-button {
         &-next, &-prev {
             color: $primary-color;
+            z-index: 2;
             &::after {
                 font-size: 26px;
                 font-weight: 900;
@@ -469,6 +470,15 @@ footer {
 /* inner page css */
 .inner-page {
     padding-top: 148px;
+    @include respond(laptop2) {
+        padding-top: 140px;
+    }
+    @include respond(ipad) {
+        padding-top: 130px;
+    }
+    @include respond(mobile) {
+        padding-top: 80px;
+    }
 }
 .breadcrumb {
     &-item {
@@ -483,9 +493,319 @@ footer {
     }
     &-section {
         padding-top: 50px;
+        padding-bottom: 11px;
+        @include respond(mobile) {
+            padding-bottom: 0;
+        }
         h3 {
             margin-bottom: 2px;
             font-weight: bold;
+        }
+    }
+}
+
+.thumbnail {
+    &-slider, &-nav {
+        .swiper {
+            &-slide {
+                height: 552px;
+                @include respond(laptop) { 
+                    height: 400px;
+                }
+                @include respond(laptop2) {
+                    height: 300px;
+                }
+                @media (max-width: 480px) {
+                    height: 260px;
+                }
+                @include respond(mobilesm) {
+                    height: 200px;
+                }
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    &-nav {
+        margin-top: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+        .swiper {
+           &-slide {
+                height: 87px;
+                opacity: 0.7;
+                transition: 0.5s;
+                @include respond(laptop) {
+                    height: 65px; 
+                }
+                img {
+                    border-radius: 7px;
+                }
+                &-thumb-active, &:hover {
+                    opacity: 1;
+                    transition: 0.5s;
+                }
+           }
+        }
+    }
+}
+.product-arrow {
+    position: relative;
+    .swiper-button {
+        &-next, &-prev {
+            background: $white;
+            width: 34px;
+            height: 34px;
+            box-shadow: 2px 1px 3px #FB99294D;
+            border-radius: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            @include respond(laptop2) {
+                width: 28px;
+                height: 28px;
+            }
+            &::after {
+                font-size: 16px;
+                @include respond(laptop2) {
+                    font-size: 13px;
+                }
+            }
+        }
+        &-prev {
+            left: -16px;
+            &::after {
+                margin-right: 2px;
+                margin-top: 3px;
+            }
+            @include respond(mobile) {
+                left: -6px;
+            }
+        }
+        &-next {
+            right: -16px;
+            &::after {
+                margin-left: 2px;
+                margin-top: 3px;
+            }
+            @include respond(mobile) {
+               right: -6px;
+            }
+        }
+    }
+    &:hover {
+        .swiper-button {
+            &-next, &-prev {
+                opacity: 1;
+                visibility: visible;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.product-wrap {
+    padding-right: 52px;
+    @include respond(laptop) { 
+        padding-right: 20px;
+    }
+    @include respond(tablet) { 
+        padding-right: 0;
+    }
+    .arrow-slider {
+        @include respond(1540) {
+            padding: 0;
+        }
+        @include respond(mobile) { 
+            padding: 0 12px;
+        }
+        .swiper-button {
+            &-prev, &-next {
+                top: 50%;
+                &:after {
+                    font-size: 18px;
+                    @include respond(laptop2) {
+                        font-size: 15px;
+                    }
+                }
+            }
+            &-prev {
+                @include respond(1540) {
+                    left: -25px;
+                }
+                @include respond(ipad) { 
+                    left: -20px;
+                }
+                @include respond(mobile) { 
+                    left: -12px;
+                }
+            }
+            &-next {
+                @include respond(1540) {
+                    right: -25px;
+                }
+                @include respond(ipad) { 
+                    right: -20px;
+                }
+                @include respond(mobile) { 
+                    right: -12px;
+                }
+            }
+        }
+    }
+    .product-details {
+        padding-top: calc(30px + (52 - 30) * ((100vw - 320px) / (1920 - 320)));
+        p {
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(23px + (25 - 23) * ((100vw - 320px) / (1920 - 320)));
+            color: $light-text-color;
+            width: 97%;
+            @include respond(laptop2) {
+                width: 100%;
+            }
+        }
+        h5 {
+            margin-top: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom: 18px;
+        }
+        ul {
+            margin: -5px calc(-6px + (-10 - -6) * ((100vw - 320px) / (1920 - 320)));
+            li {
+                margin: 5px calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+    }
+}
+.right-sidebar {
+    h4 {
+        font-weight: 600;
+    }
+    .btn {
+        font-weight: 600;
+        font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: 17px;
+        @include respond(mobile) {
+            margin-top: 12px;
+        }
+    }
+    .sidebar-list {
+        li {
+            display: block;
+            + li {
+                margin-top: 21px;
+                @include respond(mobile) {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .d-flex {
+            align-items: flex-start;
+            h5 {
+                margin-bottom: 8px;
+                @include respond(mobile) {
+                    margin-bottom: 4px;
+                }
+            }
+            img {
+                margin-right: 20px;
+                margin-top: 4px;
+            }
+        }
+    }
+}
+.related-suggest {
+    .title {
+        h3 {
+            font-weight: bold;
+        }
+    }
+    .btn {
+        font-weight: normal;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-top: calc(0px + (19 - 0) * ((100vw - 320px) / (1920 - 320)));
+        @include respond(tablet) {
+            padding-top: 16px;
+            padding-bottom: 14px;
+        }
+    }
+}
+
+/* modal css */
+.modal {
+    &-content {
+        background: $footer-bg;
+        border-radius: 10px;
+        border: none;
+        color: $white;
+    }
+    &-body {
+        padding: 0;
+        border-radius: 10px;
+    }
+}
+.signup-modal {
+    .row {
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal-form {
+        width: 64%;
+        padding: 20px 0;
+        h3 {
+           margin-bottom: 5px;
+        }
+        h5 {
+            font-weight: normal;
+        }
+        form {
+            margin-top: 48px;
+            .form-control, .input-group-text {
+                border-radius: 4px;
+                background: $input-bg-color;
+                border: none;
+                color: $input-text-color;
+            }
+            .input-group-text {
+                padding-left: 13px;
+            }
+            .form-control {
+                padding: 18px 8px;
+                &::placeholder {
+                    color: $input-text-color;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .input-group {
+                margin-bottom: 30px;
+            }
+            .link-text {
+                margin-top: 13px;
+                text-align: center;
+                span {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                a {
+                    font-size: 14px;
+                    font-weight: 500;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .modal-right {
+        height: 100%;
+        img {
+            object-fit: cover;
+            height: 100%;
         }
     }
 }

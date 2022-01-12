@@ -16,6 +16,8 @@ header {
         }
         @include respond(mobile) {
             padding: 0 12px;
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
     .header-search {
@@ -125,11 +127,18 @@ header {
         transition: 0.5s;
         .navbar {
             .navbar-nav {
+                height: 56px;
                 .nav-link {
                     padding: 16px 15px;
                     @include respond(ipad) {
                         padding: 12px;
                     } 
+                }
+                @include respond(ipad) {
+                    height: 47px;
+                } 
+                @include respond(mobile) {
+                    height: auto;
                 }
             }
         }

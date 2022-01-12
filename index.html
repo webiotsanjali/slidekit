@@ -44,7 +44,7 @@
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Login</a>
+                            data-bs-target="#signupModal">Login</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Get access now</a>
@@ -882,19 +882,59 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade signup-modal" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="assets/images/icons/close.svg" class="img-fluid" alt="close icon">
+                </button>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="row m-0">
+                        <div class="col-lg-6 p-0">
+                            <div class="modal-form">
+                                <div class="text-center">
+                                    <h3>Welcome</h3>
+                                    <h5>We Are Happy To Have You</h5>
+                                </div>
+                                <form>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <img src="assets/images/icons/email.svg" class="img-fluid" alt="email icon">
+                                        </span>
+                                        <input type="email" class="form-control" placeholder="Email ID" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon2">
+                                            <img src="assets/images/icons/user.svg" class="img-fluid" alt="user icon">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="User name" aria-describedby="basic-addon2">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3">
+                                            <img src="assets/images/icons/lock.svg" class="img-fluid" alt="lock icon">
+                                        </span>
+                                        <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon3">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon4">
+                                            <img src="assets/images/icons/lock.svg" class="img-fluid" alt="lock icon">
+                                        </span>
+                                        <input type="password" class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon4">
+                                    </div>
+                                    <button type="button" class="btn btn-primary w-100">Sign Up</button>
+                                    <div class="link-text">
+                                        <span>Already a member?</span>
+                                        <a href="#"> Login</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-0">
+                            <div class="modal-right">
+                                <img src="assets/images/modal-image.png" class="img-fluid" alt="banners">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -79,3 +79,60 @@ var swiper = new Swiper(".blogswiper", {
         },
     },
 });
+
+// thumbnail slider
+var swiper = new Swiper(".thumbnail-nav", {
+    loop: true,
+    spaceBetween: 25,
+    slidesPerView: 6,
+    freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    watchSlidesProgress: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        420: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+        480: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 6,
+            spaceBetween: 15,
+        },
+        992: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+        },
+        1200: {
+            spaceBetween: 15,
+        },
+        1400: {
+            spaceBetween: 25,
+            slidesPerView: 6,
+        },
+    },
+  });
+    var swiper2 = new Swiper(".thumbnail-slider", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
