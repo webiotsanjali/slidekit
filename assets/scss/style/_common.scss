@@ -186,6 +186,49 @@ li {
     }
 }
 
+/* dropdown css */
+.dropdown {
+    button, .dropdown-item {
+        font-size: 14px;
+        line-height: 17px;
+        color: $white;
+    }
+    button {
+        padding: 0;
+        font-weight: normal;
+        &:hover {
+            color: $white;
+        }
+        &::after {
+            background-image: url(../images/icons/down-arrow.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            width: 9px;
+            height: 5px;
+            margin-left: 9px;
+        }
+    }
+    &-item {
+        &:hover {
+            background: $dropdown-bg;
+        }
+    }
+}
+.dropdown-menu {
+    background: $dropdown-bg;
+    box-shadow: 2px 3px 6px #2626266E;
+    border-radius: 10px;
+    .dropdown-header {
+        color: $white;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    li {
+        display: block;
+    }
+}
+
 /* ratio css */
 .ratio_landscape  {
     .bg-size {
@@ -226,14 +269,23 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    h3 {
+        @include respond(mobilesm) {
+            margin-bottom: 10px;
+        }
+    }
     a {
         font-weight: 500;
         color: $white;
         text-align: right;
+        display: flex;
+        align-items: center;
         img {
             transition: 0.5s;
             margin-left: 5px;
-            margin-top: -1px;
+            margin-top: 1px;
+            width: 13px;
+            height: 13px;
         }
         &:hover {
             font-size:  calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));

@@ -35,4 +35,20 @@
         $(".form-icon").toggleClass('open');
      });
 
+    const mediaQuery = window.matchMedia('(min-width: 576px)')
+    if (mediaQuery.matches) {
+        $('nav .nav-item').each(function() { 
+            $(this).css( 'width', $(this).width()+'px' ); 
+        });
+    }
+
+
+    $(".dropdown-menu a").on('click', function() {
+        var a = $(this).closest("a");
+        var getSampling = a.text();
+        $(this).parent().addClass("select").siblings().removeClass('select');
+        $(this).closest(".dropdown-menu").prev('.dropdown-toggle').find('span').text(getSampling);
+     });
+    
+
 })(jQuery);

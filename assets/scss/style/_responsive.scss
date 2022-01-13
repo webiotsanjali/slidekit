@@ -96,13 +96,13 @@
                 }
             }
         }
-    }
-    .navbar-collapse {
-        position: absolute;
-        top: 68px;
-        background: $bg-dark;
-        width: 100%;
-        left: 0;
+        .navbar-collapse {
+            position: absolute;
+            top: 68px;
+            background: $bg-dark;
+            width: 100%;
+            left: 0;
+        }
     }
     .navbar-toggler-icon {
         width: 25px;
