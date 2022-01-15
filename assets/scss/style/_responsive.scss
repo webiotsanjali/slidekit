@@ -20,6 +20,48 @@
             padding: 10px;
         }
     }
+    .filter-wrap {
+        position: relative;
+        h4 {
+            margin-right: 0;
+            cursor: pointer;
+        }
+        .filter-list {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 1;
+            padding: 15px;
+            background: $dropdown-bg;
+            width: 150px;
+            &.open {
+                top: 30px;
+                opacity: 1;
+                visibility: visible;
+                transition: 0.5s;
+            }
+            li {
+                display: block;
+                padding: 0;
+                + li {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .dropdown {
+            .dropdown-toggle {
+               &::after {
+                   position: absolute;
+                   right: 0;
+               }
+            }
+        }
+    }
 }
 
 @include respond(ipad) { 

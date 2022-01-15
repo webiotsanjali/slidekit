@@ -42,13 +42,15 @@
         });
     }
 
-
     $(".dropdown-menu a").on('click', function() {
         var a = $(this).closest("a");
         var getSampling = a.text();
         $(this).parent().addClass("select").siblings().removeClass('select');
         $(this).closest(".dropdown-menu").prev('.dropdown-toggle').find('span').text(getSampling);
      });
-    
+
+    $(".filter-wrap h4").on('click', function() {
+        $(".filter-list").toggleClass('open');
+    });
 
 })(jQuery);

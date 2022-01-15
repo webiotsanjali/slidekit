@@ -216,6 +216,7 @@ li {
     }
 }
 .dropdown-menu {
+    z-index: 2;
     background: $dropdown-bg;
     box-shadow: 2px 3px 6px #2626266E;
     border-radius: 10px;
@@ -258,7 +259,7 @@ section {
     background: $bg-dark !important;
 }
 .bg-dark1 {
-    background: $bg-dark-50;
+    background: $bg-dark-50 !important;
 }
 .bg-dark, .bg-dark1 {
     color: $white;
