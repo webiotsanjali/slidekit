@@ -31,18 +31,17 @@
     <main class="inner-page">
         <!--header start -->
         <header id="header" class="fixed">
-            <div class="d-flex flex-wrap py-3">
+            <div class="d-flex py-3">
                 <a href="#" class="navbar-brand">
                     <img src="assets/images/logo.png" class="img-fluid" alt="logo">
                 </a>
                 <form class="header-search m-auto">
                     <div class="form-group form-icon">
                         <input type="text" class="form-control" placeholder="Search a template">
-                        <img src="assets/images/icons/search.svg" class="img-fluid search-icon d-md-block d-none"
-                            alt="search icon">
+                        <img src="assets/images/icons/search.svg" class="img-fluid search-icon" alt="search icon">
                     </div>
                 </form>
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills d-md-block d-none">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white" data-bs-toggle="modal"
                             data-bs-target="#signupModal">Login</a>
@@ -50,23 +49,24 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Get access now</a>
                     </li>
-                    <li class="d-md-none d-block">
-                        <a href="javascript:void(0)">
-                            <img src="assets/images/icons/search.svg" class="img-fluid search-icon" alt="search icon">
-                        </a>
-                    </li>
                 </ul>
             </div>
 
             <!-- navigation menu start -->
-            <nav class="navbar navbar-expand-sm navbar-dark">
+            <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                      </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-md-none d-flex sidebar-logo">
+                            <a href="javascript:void(0)" class="brand-logo">
+                                <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                            </a>
+                            <a href="javascript:void(0)" class="close-toggle">
+                                <img src="assets/images/icons/close-white.svg" class="img-fluid" alt="close icon">
+                            </a>
+                        </div>
                         <ul class="navbar-nav navbar-nav m-auto">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#">Infographics</a>
@@ -84,6 +84,10 @@
                                 <a class="nav-link" href="#">Creative</a>
                             </li>
                         </ul>
+                        <div class="bottom-links d-md-none d-flex">
+                            <button type="button" class="btn btn-primary">Get access now</button>
+                            <a href="javascript:void(0)">Login</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -106,6 +110,34 @@
                                 <li class="breadcrumb-item active" aria-current="page">Template name</li>
                             </ol>
                         </nav>
+                        <div class="share-icon dropdown">
+                           <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenuButton1"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                               <img src="assets/images/icons/share.svg" class="img-fluid" alt="share">
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <img src="assets/images/social-icons/pinterest.svg" class="img-fluid" alt="social icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <img src="assets/images/social-icons/facebook.svg" class="img-fluid" alt="social icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <img src="assets/images/social-icons/twitter.svg" class="img-fluid" alt="social icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <img src="assets/images/social-icons/linkedin.svg" class="img-fluid" alt="social icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,6 +180,7 @@
                                                     alt="product image" />
                                             </div>
                                         </div>
+                                        <div class="swiper-pagination"></div>
                                     </div>
                                     <div class="swiper-button-next"></div>
                                 </div>
@@ -215,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-lg-4">
+                    <div class="col-xxl-3 col-lg-4 d-sm-block d-none">
                         <div class="right-sidebar">
                             <div class="card">
                                 <div class="card-body text-center">
@@ -267,6 +300,13 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 d-sm-none d-block">
+                        <div class="download-fix">
+                            <button type="button" class="btn btn-primary">
+                                download template
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -357,7 +397,7 @@
         <!-- related product section end -->
 
         <!-- footer section start -->
-        <footer>
+        <footer class="fix-bottom-space">
             <div class="container">
                 <div class="main-footer">
                     <div class="row gy-4">
@@ -448,7 +488,7 @@
                         <div class="col-sm-6">
                             <p class="copyright">Copyright © 2021 slidekit.com</p>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 order-sm-0 order-first">
                             <ul class="social-links">
                                 <li>
                                     <a href="javascript:void(0)">

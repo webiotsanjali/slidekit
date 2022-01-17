@@ -31,9 +31,19 @@
         el.hide();
     });
 
-    $(".nav-pills .search-icon").on('click', function() {
-        $(".form-icon").toggleClass('open');
-     });
+    $(".navbar-toggler").on('click', function() { 
+        $('.bg-overlay').addClass('active');
+    });
+
+    $(".close-toggle").on('click', function() {
+        $(".navbar-collapse").removeClass('show');
+        $('.bg-overlay').removeClass('active');
+    });
+
+     var contentwidth = $(window).width();
+     if (contentwidth < 768) {
+       $('<div class="bg-overlay"></div>').appendTo($("body"));
+     }
 
     const mediaQuery = window.matchMedia('(min-width: 576px)')
     if (mediaQuery.matches) {
@@ -53,4 +63,22 @@
         $(".filter-list").toggleClass('open');
     });
 
+    const mediaQuery1 = window.matchMedia('(max-width: 767px)')
+    if (mediaQuery1.matches) {
+            $(".navbar-brand").find('img').attr('src', 'assets/images/favicon.png'); 
+    } else {
+        $(".navbar-brand").find('img').attr('src', 'assets/images/logo.png'); 
+    }
+
 })(jQuery);
+
+$(document).mouseup(function(e) {
+    // menu sidebar
+    var navMenu = $(".nav-menu");
+    if (!navMenu.is(e.target) &&
+        navMenu.has(e.target).length === 0) {
+        $(".navbar-collapse").removeClass('show');
+        $('.bg-overlay').removeClass('active');
+    }
+
+});

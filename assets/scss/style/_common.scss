@@ -243,7 +243,7 @@ li {
 
 /* section css */
 section {
-    padding-top: calc(50px + (90 - 50) * ((100vw - 320px) / (1920 - 320)));
+    padding-top: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
     .border-bottom {
         border-bottom: 1px solid $border-color !important;
     }
@@ -252,7 +252,7 @@ section {
     padding-bottom: calc(30px + (78 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
 .section-lg-space {
-    padding: calc(60px + (140 - 60) * ((100vw - 320px) / (1920 - 320))) 0;
+    padding: calc(30px + (140 - 30) * ((100vw - 320px) / (1920 - 320))) 0;
 }
 
 .bg-dark {

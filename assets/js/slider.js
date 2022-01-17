@@ -8,6 +8,11 @@ var swiper = new Swiper(".arrowswiper", {
     },
     breakpoints: {
         0: {
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 10,
+        },
+        576: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
@@ -131,6 +136,10 @@ var swiper = new Swiper(".thumbnail-nav", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
     thumbs: {
         swiper: swiper,
