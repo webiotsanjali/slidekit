@@ -29,10 +29,10 @@
         <!--header start -->
         <header id="header" class="fixed">
             <div class="d-flex flex-wrap py-3 bg-dark1">
-                <a href="#" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <img src="assets/images/logo.png" class="img-fluid" alt="logo">
                 </a>
-                <ul class="nav nav-pills ms-auto me-0">
+                <ul class="nav nav-pills ms-auto me-0 d-md-block d-none">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white" data-bs-toggle="modal"
                             data-bs-target="#signupModal">Login</a>
@@ -42,6 +42,48 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- navigation menu start -->
+            <nav class="navbar navbar-expand-md navbar-dark d-md-none">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-md-none d-flex sidebar-logo">
+                            <a href="index.html" class="brand-logo">
+                                <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                            </a>
+                            <a href="javascript:void(0)" class="close-toggle">
+                                <img src="assets/images/icons/close-white.svg" class="img-fluid" alt="close icon">
+                            </a>
+                        </div>
+                        <ul class="navbar-nav navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Infographics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Business</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Deck</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Creative</a>
+                            </li>
+                        </ul>
+                        <div class="bottom-links d-md-none d-flex">
+                            <button type="button" class="btn btn-primary">Get access now</button>
+                            <a href="javascript:void(0)">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- navigation menu end -->
+
         </header>
         <!--header end -->
 
@@ -65,7 +107,7 @@
                                         <span>Monthly</span>
                                     </div>
                                 </div>
-                                <div class="plan-details">
+                                <div class="plan-details annual-plan">
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="plan-list">
@@ -90,7 +132,47 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-md-5 order-md-0 order-first">
+                                            <div class="plan-subscribe">
+                                                <div class="ribbon">
+                                                    <span>Best Value</span>
+                                                </div>
+                                                <div class="price-data">
+                                                    <h1>$5.83</h1>
+                                                    <span>/Month</span>
+                                                </div>
+                                                <button type="button" class="btn btn-primary">Subscribe Now</button>
+                                                <span class="d-block">Billed annually as $69.99</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plan-details month-plan">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="plan-list">
+                                                <h5>Monthly Plan</h5>
+                                                <ul>
+                                                    <li>
+                                                        <img src="assets/images/icons/tick.svg" class="img-fluid" alt="tick icon">
+                                                        <span>Premium Support</span>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/icons/tick.svg" class="img-fluid" alt="tick icon">
+                                                        <span>Unlimited downloads</span>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/icons/tick.svg" class="img-fluid" alt="tick icon">
+                                                        <span>Access to entire template library</span>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/icons/tick.svg" class="img-fluid" alt="tick icon">
+                                                        <span>Cancel any time</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 order-md-0 order-first">
                                             <div class="plan-subscribe">
                                                 <div class="ribbon">
                                                     <span>Best Value</span>
@@ -240,6 +322,11 @@
             <div class="container">
                 <div class="sub-footer text-center">
                     <div class="row">
+                        <div class="col-lg-2 d-md-none">
+                            <a href="index.html" class="footer-logo">
+                                <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                            </a>
+                        </div>
                         <div class="col-sm-12">
                             <p class="copyright">Copyright © 2021 slidekit.com</p>
                         </div>
@@ -314,25 +401,33 @@
         </div>
     </div>
 
-    <!-- Bootstrap js -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- jquery js -->
+    <script nonce="jqueryfile" src="assets/js/jquery-3.3.1.min.js"></script>
 
     <!-- Bootstrap js -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script nonce="bootstrapjsfile" src="assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/script.js"></script>
+    <script nonce="scriptfile" src="assets/js/script.js"></script>
 
     <script>
-        $(document).ready(function() {
-            // $(".form-switch input").parent().next("span").removeClass("active");
-            // $('.form-switch input').click(function() {
-            //     if ($(".form-switch input").attr('checked', true)) {
-            //         $(this).parent().next("span").addClass("active");
-            //     } else {
-            //         $(this).parent().next("span").removeClass("active");
-            //     }
-            // });
-	    });
+        (function ($) {
+            "use strict";
+            $(".toogle-switch input").on("change", function(e) {
+                const isOn = e.currentTarget.checked;
+                
+                if (isOn) {
+                    $(".annual-plan").hide();
+                    $(".month-plan").show();
+                    $(this).parent().next('span').addClass('active');
+                    $(this).parent().prev('span').removeClass('active');
+                } else {
+                    $(".annual-plan").show();
+                    $(".month-plan").hide();
+                    $(this).parent().next('span').removeClass('active');
+                    $(this).parent().prev('span').addClass('active');
+                }
+            });
+	    })(jQuery);
     </script>
 
 </body>

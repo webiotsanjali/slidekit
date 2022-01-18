@@ -516,6 +516,7 @@ footer {
     color: $white;
     padding-top: calc(30px + (58 - 30) * ((100vw - 320px) / (1920 - 320)));
     padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+
     .column-list {
         column-count: 2;
         column-gap: 16px;
@@ -1068,6 +1069,7 @@ footer {
 }
 .sort-option {
     display: flex;
+    align-items: center;
     h4 {
         margin-right: 34px;
         @include respond(mobile) {
@@ -1423,7 +1425,7 @@ footer {
     }
     .plan {
         &-section {
-            padding-top: calc(60px + (118 - 60) * ((100vw - 320px) / (1920 - 320)));
+            padding-top: calc(40px + (118 - 40) * ((100vw - 320px) / (1920 - 320)));
         }
         &-content {
             text-align: center;
@@ -1448,12 +1450,29 @@ footer {
                 align-items: flex-end;
                 justify-content: center;
                 margin-bottom: 20px;
+                @include respond(ipad) {
+                    margin-bottom: 15px;
+                }
                 h1 {
                     margin-bottom: 0;
                     font-weight: 600;
                 }
                 span {
                     margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    footer {
+        @include respond(ipad) {
+            background: $footer-bg !important;
+            .sub-footer {
+                border-top: none;
+                padding-top: 0;
+                .copyright {
+                    padding-top: 6px;
+                    margin-top: 30px;
+                    border-top: 1px solid $white;
                 }
             }
         }
@@ -1471,13 +1490,32 @@ footer {
             border-radius: 10px;
             display: flex;
             position: relative;
+            &.month-plan {
+                display: none;
+            }
+            @include respond(ipad) {
+                padding: 0;
+                max-width: unset;
+                display: block;
+            }
             > div {
                 width: 100%;
             }
             .row {
+                .order-first {
+                    @include respond(ipad) {
+                        padding-bottom: 0;
+                    }
+                }
                 > div {
                     padding: calc(15px + (55 - 15) * ((100vw - 320px) / (1920 - 320)))
                                 calc(25px + (65 - 25) * ((100vw - 320px) / (1920 - 320)));
+                    @include respond(ipad) {
+                        padding: 36px calc(20px + (57 - 20) * ((100vw - 320px) / (767 - 320)));
+                    }       
+                    @include respond(mobilesm) {
+                        padding: 20px;
+                    }     
                     &:last-child {
                         border-left: 1px solid #2F3037;
                         @include respond(ipad) {
@@ -1488,17 +1526,45 @@ footer {
             }
         }
         &-list {
+            @include respond(ipad) {
+                text-align: center;
+            }
             h5 {
                 font-weight: bold;
+                @include respond(ipad) {
+                    position: absolute;
+                    top: 36px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-left: -10px;
+                }
+                @include respond(mobilesm) {
+                    top: 20px;
+                }
             }
             ul {
                 margin-top: 16px;
+                @include respond(ipad) {
+                    margin-top: 0;
+                    display: inline-block;
+                }
                 img {
                     margin-right: 17px;
+                    @include respond(mobilesm) {
+                        margin-right: 10px;
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
                 li {
                     display: flex;
                     align-items: center;
+                    @include respond(mobilesm) {
+                        font-size: 12px;
+                        span {
+                            margin-bottom: -2px;
+                        }
+                    }
                     + li {
                         margin-top: 10px;
                     }
@@ -1507,6 +1573,9 @@ footer {
         }
         &-subscribe {
             text-align: center;
+            @include respond(ipad) {
+                padding-top: 30px;
+            }
             .ribbon {
                 width: 150px;
                 height: 150px;
@@ -1558,6 +1627,9 @@ footer {
                 @include respond(laptop2) {
                     padding: 19px 35px;
                 }
+                @include respond(mobile) {
+                    padding: 14px 52px;
+                }
             }
         }
     }
@@ -1568,6 +1640,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
         .form-check-input {
             width: 43px;
             height: 24px;
@@ -1579,6 +1652,7 @@ footer {
           margin-right: 50px; 
           font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
           line-height: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+          transition: 0.5s;
           @include respond(ipad) {
             margin-right: 35px; 
           }
@@ -1586,6 +1660,7 @@ footer {
             font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
             line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
             font-weight: 500;
+            transition: 0.5s;
           }
           ~ span {
               margin-right: 0 !important;
@@ -1702,9 +1777,12 @@ footer {
     }
 }
 .faq-section {
+    @include respond(ipad) {
+        padding-bottom: 53px;
+    }
     .see-link {
         text-align: center;
-        margin-top: 56px;
+        margin-top: calc(30px + (56 - 30) * ((100vw - 320px) / (1920 - 320)));
         a {
             font-weight: 500;
             &:hover {
