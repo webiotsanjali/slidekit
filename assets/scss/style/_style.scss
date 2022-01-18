@@ -148,6 +148,10 @@
         border-radius: 8px;
         overflow: hidden;
         transition: 0.9s;
+        > img {
+            border-radius: 11px;
+            width: 100%;
+        }
         .overlay {
             display: flex;
             align-items: flex-end;
@@ -236,9 +240,25 @@
                 }
             }
         }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 38px 9px rgba($black, 0.45);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+        }
         &:hover {
             transition: 0.9s;
-            box-shadow: inset 0 0 38px 9px rgba($black, 0.45);
+            &::before {
+                opacity: 1;
+                visibility: visible;
+                transition: 0.5s;
+            }
             .overlay {
                 bottom: -1px;
                 h6, span,p, a {
@@ -279,8 +299,10 @@
                     }
                 }
             }
+            &::before {
+                display: none;
+            }
             &:hover { 
-                box-shadow: unset;
                 .overlay {
                     bottom: 0;
                 }
@@ -421,6 +443,9 @@
 .blog {
     &-image {
         border-radius: 10px;
+        img {
+            border-radius: 10px;
+        }
     }
     &-content {
         padding-top: 28px;

@@ -230,17 +230,6 @@ li {
     }
 }
 
-/* ratio css */
-.ratio_landscape  {
-    .bg-size {
-        &:before {
-            padding-top: 60%;
-            content: "";
-            display: block;
-        }
-    }
-}
-
 /* section css */
 section {
     padding-top: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
