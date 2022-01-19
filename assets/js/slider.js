@@ -1,6 +1,7 @@
 var swiper = new Swiper(".arrowswiper", {
     slidesPerView: 3,
     freeMode: true,
+    // loop: true,
     spaceBetween: 36,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -8,8 +9,8 @@ var swiper = new Swiper(".arrowswiper", {
     },
     breakpoints: {
         0: {
-            slidesPerView: 2,
-            centeredSlides: true,
+            slidesPerView: 1,
+            // centeredSlides: true,
             spaceBetween: 10,
         },
         576: {

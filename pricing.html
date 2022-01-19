@@ -77,7 +77,8 @@
                         </ul>
                         <div class="bottom-links d-md-none d-flex">
                             <button type="button" class="btn btn-primary">Get access now</button>
-                            <a href="javascript:void(0)">Login</a>
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#signupModal">Login</a>
                         </div>
                     </div>
                 </div>
@@ -353,36 +354,32 @@
                                     <h3>Welcome</h3>
                                     <h5>We Are Happy To Have You</h5>
                                 </div>
-                                <form>
+                                <form class="needs-validation" novalidate>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1">
                                             <img src="assets/images/icons/email.svg" class="img-fluid" alt="email icon">
                                         </span>
-                                        <input type="email" class="form-control" placeholder="Email ID"
-                                            aria-describedby="basic-addon1">
+                                        <input type="email" class="form-control" placeholder="Email ID" aria-describedby="basic-addon1" required>
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon2">
                                             <img src="assets/images/icons/user.svg" class="img-fluid" alt="user icon">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="User name"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control" placeholder="User name" aria-describedby="basic-addon2" required>
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon3">
                                             <img src="assets/images/icons/lock.svg" class="img-fluid" alt="lock icon">
                                         </span>
-                                        <input type="password" class="form-control" placeholder="Password"
-                                            aria-describedby="basic-addon3">
+                                        <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon3" required>
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon4">
                                             <img src="assets/images/icons/lock.svg" class="img-fluid" alt="lock icon">
                                         </span>
-                                        <input type="password" class="form-control" placeholder="Confirm Password"
-                                            aria-describedby="basic-addon4">
+                                        <input type="password" class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon4" required>
                                     </div>
-                                    <button type="button" class="btn btn-primary w-100">Sign Up</button>
+                                    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
                                     <div class="link-text">
                                         <span>Already a member?</span>
                                         <a href="javascript:void(0)"> Login</a>
@@ -406,6 +403,9 @@
 
     <!-- Bootstrap js -->
     <script nonce="bootstrapjsfile" src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Validation js -->
+    <script nonce="formvalidationfile" src="assets/js/validation.js"></script>
 
     <script nonce="scriptfile" src="assets/js/script.js"></script>
 

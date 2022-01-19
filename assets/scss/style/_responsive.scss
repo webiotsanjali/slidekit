@@ -231,7 +231,7 @@
         overflow: hidden;
         .arrow-slider {
             padding: 0;
-            margin: 0 -32px;
+            margin: 0 -32px 0 -28px;
             width: 100vw;
             .swiper-button {
                 &-prev, &-next {
@@ -271,7 +271,7 @@
     }
     .trending-section {
         .arrow-slider {
-            margin: 0 -25px;
+            margin: 0 -25px 0 -20px;
         }
     }
     header {
@@ -295,9 +295,6 @@
                 }
             }
         }
-    }
-    .title {
-        display: block;
     }
 }
 

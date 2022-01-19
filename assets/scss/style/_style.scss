@@ -964,6 +964,12 @@ footer {
 
 /* modal css */
 .modal {
+    &-dialog {
+        @include respond(mobile) { 
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
     &-content {
         background: $footer-bg;
         box-shadow: 0px 0px 14px #00000080;
@@ -978,12 +984,6 @@ footer {
 }
 .signup-modal {
     .modal {
-        &-dialog {
-            @include respond(mobile) { 
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-        }
         &-form {
             width: 64%;
             padding: 20px 0;
@@ -1064,6 +1064,21 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+}
+.video-modal {
+    .modal-content {
+        background: transparent;
+        box-shadow: none;
+    }
+    iframe {
+        width: 100%;
+        @include respond(tablet) {
+            height: 280px !important;
+        }
+        @include respond(mobile) {
+            height: calc(160px + (250 - 160) * ((100vw - 320px) / (575 - 320))) !important;
         }
     }
 }
