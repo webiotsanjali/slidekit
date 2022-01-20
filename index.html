@@ -1031,16 +1031,24 @@
     <script>
         (function ($) { 
             "use strict";
-            $(".navbar-brand").find('img').attr('src', 'assets/images/logo.png'); 
+            
             $(window).scroll(function () {
                 const mediaQuery = window.matchMedia('(max-width: 767px)')
                 var scroll = $(window).scrollTop();
-                if (scroll >= 600 && mediaQuery.matches) {
+                if ($("header").hasClass("fixed")) { 
+                    $(".navbar-brand").find('img').attr('src', 'assets/images/logo.png'); 
+                }
+                if (scroll >= 600) {
                     $("header").addClass("fixed");
-                    $(".navbar-brand").find('img').attr('src', 'assets/images/favicon.png'); 
+                    if (mediaQuery.matches) {
+                        $(".navbar-brand").find('img').attr('src', 'assets/images/favicon.png'); 
+                    }
                 } else {
                     $("header").removeClass("fixed");
                     $(".navbar-brand").find('img').attr('src', 'assets/images/logo.png'); 
+                    if (mediaQuery.matches) {
+                        $(".navbar-brand").find('img').attr('src', 'assets/images/logo.png'); 
+                    }
                 } 
             });
         })(jQuery);

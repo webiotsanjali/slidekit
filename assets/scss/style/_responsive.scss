@@ -231,16 +231,13 @@
         overflow: hidden;
         .arrow-slider {
             padding: 0;
-            margin: 0 -32px 0 -28px;
+            margin: 0 -32px 0 -32px;
             width: 100vw;
             .swiper-button {
                 &-prev, &-next {
                     display: none;
                 }
             }
-        }
-        .swiper-slide {
-            width: 273px !important;
         }
     }
     .arrow-white {
